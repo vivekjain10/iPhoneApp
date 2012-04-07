@@ -274,6 +274,7 @@
 				F09FC1FD153051D2004A1E03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
