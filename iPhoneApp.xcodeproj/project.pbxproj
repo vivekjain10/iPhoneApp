@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F06761C91531252100E72AF2 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F06761C81531252100E72AF2 /* TapkuLibrary.bundle */; };
+		F06761CC1531260800E72AF2 /* libTapkuLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F06761C51531251600E72AF2 /* libTapkuLibrary.a */; };
+		F06761CE1531261D00E72AF2 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06761CD1531261D00E72AF2 /* MapKit.framework */; };
+		F06761D01531264000E72AF2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F06761CF1531264000E72AF2 /* QuartzCore.framework */; };
 		F09FC1E2153051D2004A1E03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E1153051D2004A1E03 /* UIKit.framework */; };
 		F09FC1E4153051D2004A1E03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E3153051D2004A1E03 /* Foundation.framework */; };
 		F09FC1E6153051D2004A1E03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E5153051D2004A1E03 /* CoreGraphics.framework */; };
@@ -33,11 +36,20 @@
 			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
 			remoteInfo = LogicTests;
 		};
+		F06761CA153125C500E72AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
 		F06761C81531252100E72AF2 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
+		F06761CD1531261D00E72AF2 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		F06761CF1531264000E72AF2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F09FC1DD153051D2004A1E03 /* iPhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09FC1E1153051D2004A1E03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F09FC1E3153051D2004A1E03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -58,6 +70,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06761D01531264000E72AF2 /* QuartzCore.framework in Frameworks */,
+				F06761CE1531261D00E72AF2 /* MapKit.framework in Frameworks */,
+				F06761CC1531260800E72AF2 /* libTapkuLibrary.a in Frameworks */,
 				F09FC1E2153051D2004A1E03 /* UIKit.framework in Frameworks */,
 				F09FC1E4153051D2004A1E03 /* Foundation.framework in Frameworks */,
 				F09FC1E6153051D2004A1E03 /* CoreGraphics.framework in Frameworks */,
@@ -79,6 +94,8 @@
 		F09FC1D2153051D2004A1E03 = {
 			isa = PBXGroup;
 			children = (
+				F06761CF1531264000E72AF2 /* QuartzCore.framework */,
+				F06761CD1531261D00E72AF2 /* MapKit.framework */,
 				F06761C81531252100E72AF2 /* TapkuLibrary.bundle */,
 				F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */,
 				F09FC1E7153051D2004A1E03 /* iPhoneApp */,
@@ -143,6 +160,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F06761CB153125C500E72AF2 /* PBXTargetDependency */,
 			);
 			name = iPhoneApp;
 			productName = iPhoneApp;
@@ -223,6 +241,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F06761CB153125C500E72AF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TapkuLibrary;
+			targetProxy = F06761CA153125C500E72AF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		F09FC1EA153051D2004A1E03 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -293,12 +319,14 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneApp/iPhoneApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = tapkulibrary/src;
 				INFOPLIST_FILE = "iPhoneApp/iPhoneApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../tapkulibrary/demo/DerivedData/Demo/Build/Products/Debug-iphonesimulator\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = tapkulibrary/src;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -308,12 +336,15 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneApp/iPhoneApp-Prefix.pch";
+				HEADER_SEARCH_PATHS = tapkulibrary/src;
+				"HEADER_SEARCH_PATHS[arch=*]" = "";
 				INFOPLIST_FILE = "iPhoneApp/iPhoneApp-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../tapkulibrary/demo/DerivedData/Demo/Build/Products/Debug-iphonesimulator\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = tapkulibrary/src;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
