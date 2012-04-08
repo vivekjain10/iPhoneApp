@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F06761C91531252100E72AF2 /* TapkuLibrary.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F06761C81531252100E72AF2 /* TapkuLibrary.bundle */; };
 		F09FC1E2153051D2004A1E03 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E1153051D2004A1E03 /* UIKit.framework */; };
 		F09FC1E4153051D2004A1E03 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E3153051D2004A1E03 /* Foundation.framework */; };
 		F09FC1E6153051D2004A1E03 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F09FC1E5153051D2004A1E03 /* CoreGraphics.framework */; };
@@ -17,7 +18,26 @@
 		F09FC1F8153051D2004A1E03 /* HelloWorldViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F09FC1F7153051D2004A1E03 /* HelloWorldViewController.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F06761C41531251600E72AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = TapkuLibrary;
+		};
+		F06761C61531251600E72AF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3B45DDF1134C736600D24C1A;
+			remoteInfo = LogicTests;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TapkuLibrary.xcodeproj; path = ../tapkulibrary/src/TapkuLibrary.xcodeproj; sourceTree = "<group>"; };
+		F06761C81531252100E72AF2 /* TapkuLibrary.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TapkuLibrary.bundle; path = ../tapkulibrary/src/TapkuLibrary.bundle; sourceTree = "<group>"; };
 		F09FC1DD153051D2004A1E03 /* iPhoneApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iPhoneApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F09FC1E1153051D2004A1E03 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F09FC1E3153051D2004A1E03 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,9 +67,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F06761BD1531251600E72AF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F06761C51531251600E72AF2 /* libTapkuLibrary.a */,
+				F06761C71531251600E72AF2 /* LogicTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		F09FC1D2153051D2004A1E03 = {
 			isa = PBXGroup;
 			children = (
+				F06761C81531252100E72AF2 /* TapkuLibrary.bundle */,
+				F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */,
 				F09FC1E7153051D2004A1E03 /* iPhoneApp */,
 				F09FC1E0153051D2004A1E03 /* Frameworks */,
 				F09FC1DE153051D2004A1E03 /* Products */,
@@ -136,12 +167,35 @@
 			mainGroup = F09FC1D2153051D2004A1E03;
 			productRefGroup = F09FC1DE153051D2004A1E03 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F06761BD1531251600E72AF2 /* Products */;
+					ProjectRef = F06761BC1531251600E72AF2 /* TapkuLibrary.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F09FC1DC153051D2004A1E03 /* iPhoneApp */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F06761C51531251600E72AF2 /* libTapkuLibrary.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTapkuLibrary.a;
+			remoteRef = F06761C41531251600E72AF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F06761C71531251600E72AF2 /* LogicTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = LogicTests.octest;
+			remoteRef = F06761C61531251600E72AF2 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F09FC1DB153051D2004A1E03 /* Resources */ = {
@@ -150,6 +204,7 @@
 			files = (
 				F09FC1EC153051D2004A1E03 /* InfoPlist.strings in Resources */,
 				F09FC1F5153051D2004A1E03 /* MainStoryboard.storyboard in Resources */,
+				F06761C91531252100E72AF2 /* TapkuLibrary.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +294,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneApp/iPhoneApp-Prefix.pch";
 				INFOPLIST_FILE = "iPhoneApp/iPhoneApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../tapkulibrary/demo/DerivedData/Demo/Build/Products/Debug-iphonesimulator\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -250,6 +309,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iPhoneApp/iPhoneApp-Prefix.pch";
 				INFOPLIST_FILE = "iPhoneApp/iPhoneApp-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../tapkulibrary/demo/DerivedData/Demo/Build/Products/Debug-iphonesimulator\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
