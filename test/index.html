@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>Install Fly Delta for iOS</title>
+    <style>
+      body { margin:20px;font-size:17px;font-family:Helvetica;}
+      h1 { font-size:250%; }
+
+      input#agree {
+        margin: 50px;
+        -webkit-transform: scale(5, 5);
+        background-color: #ccc;
+      }
+
+      input {
+        font-size: 250%;
+        margin: auto;
+      }
+
+      label {
+        font-size: 200%;
+      }
+
+      .center {
+        text-align:center;
+      }
+
+      a { text-decoration:none; }
+      p { padding-top: 100px;  }
+    </style>
+
+    <script type="text/javascript" charset="utf-8">
+      function download_ios() {
+        window.location.href = "itms-services://?action=download-manifest&amp;url=delta.plist";
+        return false;
+      }
+    </script>
+
+    <script type="text/javascript" charset="utf-8">
+      function download_droid() {
+        window.location.href = "flydelta-1.0.apk";
+        return false;
+      }
+    </script>
+  </head>
+  <body>
+	<a href="flydelta-1.0.apk">android apk</a>
+      <p class="center" >
+        <input type="submit" id='install' value='Install Fly Delta on iOS' onclick="download_ios()"/>
+      </p>
+      <p class="center" >
+        <input type="submit" id='install' value='Install Fly Delta on Droid' onclick="download_droid()"/>
+      </p>
+  </body>
+</html>
